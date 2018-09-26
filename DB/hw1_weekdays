@@ -1,0 +1,17 @@
+CREATE TABLE `weekdays`(
+`ND` MEDIUMINT NOT NULL AUTO_INCREMENT,
+`days` VARCHAR(10) NOT NULL,
+PRIMARY KEY (`ND`)
+);
+
+DESCRIBE weekdays;
+
+INSERT INTO weekdays (days) VALUES 
+	('Sunday'),('Monday'),('Tuesday'),
+	('Wednesday'),('Thursday'),('Friday'),('Saturday');
+
+SELECT*FROM weekdays;
+
+
+
+

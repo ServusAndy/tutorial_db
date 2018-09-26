@@ -1,0 +1,32 @@
+SELECT `model`,`price`, CONCAT(`carCode`,' - ',`manufc`) AS `Manufracture` FROM `cars`
+WHERE CONCAT(`carCode`,' - ',`manufc`) = 'HND - Honda';
+
+
+
+SELECT `model`,`price`, CONCAT(`carCode`,' - ',`manufc`) AS `Manufracture` FROM `cars`
+ORDER BY 3;
+
+
+
+mysqldump -u root -p --databases bp_48
+
+/opt/lampp/bin/mysqldump -u root --databases bp_48 > Text.txt
+
+
+
+mysqldump -u root -p --databases bp_48 > '~/Google Drive/TelRanCourses/MySQL/BP_48/db.sql'
+
+
+
+./mysql -u root < db.sql
+
+mysqldump -u root -p -t -v--databases bp_48 > '~/Google Drive/TelRanCourses/MySQL/BP_48/db.sql'
+
+./mysqldump -u root -p --databases bp_48 > filpath
+
+./mysql-u root -p -t -v < filepath
+
+
+
+
+
