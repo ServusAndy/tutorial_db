@@ -12,7 +12,7 @@ WHERE cus.id = cc.customer_id
 GROUP BY cus.id) as t;
 
 -- 3 
-SELECT cus.name,cus.phone,cus.city,GROUP_CONCAT(c.model) AS `models`,GROUP_CONCAT(m.name) AS `manufc name`, SUM(c.price) AS `sum of prices` FROM customer cus  
+SELECT cus.name,cus.phone,cus.city,GROUP_CONCAT(c.model) AS `models`,GROUP_CONCAT(DISTINCT m.name) AS `manufc name`, SUM(c.price) AS `sum of prices` FROM customer cus  
 JOIN customer_cars cc ON cc.customer_id = cus.id
 JOIN cars c ON cc.cars_id = c.id 
 JOIN manufacture m ON c.manufc_id = m.id WHERE m.country = 'Japan' GROUP BY cus.id LIMIT 1;
