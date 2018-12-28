@@ -1,17 +1,26 @@
 SELECT `model`,`price`, CONCAT(`carCode`,' - ',`manufc`) AS `Manufracture` FROM `cars`
 WHERE CONCAT(`carCode`,' - ',`manufc`) = 'HND - Honda';
+
+
+
 SELECT `model`,`price`, CONCAT(`carCode`,' - ',`manufc`) AS `Manufracture` FROM `cars`
 ORDER BY 3;
-=========================================================================================
- 
-sudo /opt/lampp/lampp start
 
-/opt/lampp/bin/mysql -u root
+----------------------------------------------------------------------------------
+   -- Specify to check foreign key constraints (this is the default)
+    SET FOREIGN_KEY_CHECKS = 1;
+ 
+   -- Do not check foreign key constraints
+    SET FOREIGN_KEY_CHECKS = 0;
+------------------------------------------------------------------------------------
+
+=============================================================================================
+
+sudo /opt/lampp/lampp start
 
 mysqldump -u root -p --databases bp_48
 
 /opt/lampp/bin/mysqldump -u root --databases bp_48 > Text.txt
-
 
 
 mysqldump -u root -p --databases bp_48 > '~/Google Drive/TelRanCourses/MySQL/BP_48/db.sql'
